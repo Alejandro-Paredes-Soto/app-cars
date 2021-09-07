@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.content{
+    width: 100%;
+    min-height: 100vh;
+    background: url('./../../../assets/bg-register.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.form-container{
+    width: 450px;
+    min-height: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+    background: #F2FFF8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container  form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form-container form h1{
+    font-family: 'Lobster';
+    font-size: 55px;
+    color: #83F8BC;
+    font-weight: 900;
+    text-shadow: 0px 0px 3px #83F8BC;
+}
+
+.form-container form .inputs{
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7px;
+}
+
+.form-container form .inputs span{
+    font-family: 'Azeret Mono';
+    color: #FEDC66;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+
+.form-container form .btn{
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(90deg,#83F8BC, #FEDC66);
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: 'Fjalla One';
+    font-size: 24px;
+    margin-top: 13px;
+}
+
+.form-container form strong{
+    margin-top: 10px;
+    font-family: 'Fjalla One';
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+
+}
+
+
+.form-container form strong a{
+    color: #83F8BC;
+    
+}
+
+@media (max-width: 490px){
+    .form-container{
+        width: 350px;
+    }
+}
+
+
+@media (max-width: 394px){
+    .form-container{
+        width: 250px;
+    }
+}
+
+
+@media (max-width: 312px){
+
+    
+    .form-container{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container form .btn{
+        width: 150px;
+        font-size: 20px;
+
+    }
+    .form-container form .inputs span{
+        font-size: 18px;
+    }
+}

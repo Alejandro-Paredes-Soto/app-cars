@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+.content{
+    width: 100%;
+    height: 100%;
+   
+    background: linear-gradient(#C9DAF3,#fff);
+  
+}
+
+.navbar{
+    width: 100%;
+    min-height: 100px;
+    background: #5F93DF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 100;
+    
+}
+
+.navbar .btn{
+    width: 50px;
+    height: 50px;
+    background: #E4EFFF;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+.navbar .menu{
+    width: 200px;
+    height: 100px;
+    background: #f3f3f3;
+    position: absolute;
+    z-index: 1000;
+    top: 95px;
+    right: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+    font-family: 'Oswald';
+    font-size: 20px;
+    font-weight: 900;
+   
+}
+
+.navbar .menu .dropdown-item{
+    cursor: pointer;
+}
+
+.cont{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container{
+    width: 500px;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    margin-top: 10px;
+}
+
+.form-container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.form-container form svg{
+    margin-bottom: 10px;
+}
+
+.form-container form .inputs{
+    width: 100%;
+    min-height: 60px;
+}
+
+.form-container form .inputs span{
+    font-family: 'Asap';
+    font-weight: 900;
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+
+.form-container form .btn{
+    width: 250px;
+    height: 50px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    background: #5F93DF;
+    color: #fff;
+    font-family: 'Asap';
+    font-weight: 900;
+    font-size: 22px;
+    margin-top: 8px;
+    transition: all 400ms ease-in-out;
+}
+
+.form-container form .btn:hover{
+    background: #f3f3f3;
+    color: #5F93DF;
+    border: 1px solid #5F93DF;
+}
+
+.form-container form .marca,.modelo,.precio,.color,.img{
+    color: #2191A7;
+    font-family: 'Asap';
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.form-container form h5{
+    font-family: 'Asap';
+    color: #2191A7;
+    font-size: 33px;
+    font-weight: 900;
+}
+
+
+.form-container form .btn-add{
+    width: 250px;
+    height: 55px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background: #5F93DF;
+    color: #fff;
+    font-family: 'Asap';
+    font-weight: 900;
+    border: none;
+    margin-top: 5px;
+    transition: all 400ms ease-in-out;
+}
+
+.form-container form .btn-add:hover{
+    background: #f3f3f3;
+    color: #5F93DF;
+    border: 2px solid #5F93DF;
+}
+
+.cars-container{
+    width: 1200px;
+    min-height: 350px;
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow-x: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.cars-container .card{
+    width: 300px;
+    min-height: 300px;
+    background: #f3f3f3;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    margin-left: 9px;
+    margin-top: 9px;
+}
+
+.cars-container .card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    
+}
+
+.cars-container .card .info{
+
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cars-container .card .info .data{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-break: break-all;
+    padding: 3px;
+
+}
+
+.cars-container .card .info button{
+    background: rgb(115, 231, 69);
+    color: #fff;
+    font-family: 'Asap';
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    height: 50px;
+    padding: 4px;
+}
+
+.cars-container .card .info .data span{
+    color: #2191A7;
+    font-family: 'Oswald';
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.cars-container .card .info .data strong{
+    font-family: 'Asap';
+    font-weight: 900;
+    text-align: center;
+
+
+}
+
+
+
+@media (max-width: 1260px){
+    .cars-container{
+        width: 900px;
+    }
+}
+@media (max-width: 951px){
+    .cars-container{
+        width: 700px;
+    }
+}
+
+
+@media (max-width: 754px){
+    .cars-container{
+        width: 500px;
+    }
+}
+
+@media (max-width: 554px){
+
+    .form-container{
+        width: 400px;
+    }
+    .cars-container{
+        width: 400px;
+    }
+}
+
+@media (max-width: 444px){
+
+    .form-container{
+        width: 300px;
+    }
+    .cars-container{
+        width: 300px;
+    }
+}

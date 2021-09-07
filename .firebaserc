@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cars-1cab5": {
+      "hosting": {
+        "app-cars": [
+          "cars-1cab5"
+        ]
+      }
+    }
+  }
+}

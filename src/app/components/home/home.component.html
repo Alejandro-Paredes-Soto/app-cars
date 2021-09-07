@@ -1,0 +1,97 @@
+<section class="content">
+
+
+    <nav class="navbar">
+
+        <svg xmlns="http://www.w3.org/2000/svg" title="Inicio" routerLink="/home" width="60" height="60" fill="currentColor" class="bi bi-house"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+            <path fill-rule="evenodd"
+                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+        </svg>
+
+        <button class="btn" (click)="showMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+            </svg>
+        </button>
+        <div class="menu" *ngIf="showTheMenu">
+            <div class="dropdown-item" (click)="showSearch()">Rentar</div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item" (click)="showAdd()">Agregar Auto</div>
+           
+        </div>
+
+    </nav>
+
+    <div class="cont">
+
+        <div class="form-container">
+
+
+            <form action="/" *ngIf="searchCar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+
+                <div class="inputs">
+                    <span>Nombre de la marca del auto:</span>
+                    <input type="text" class="form-control" [(ngModel)]="searchPipe" name="searchPipe"
+                        placeholder="Ingresa la marca">
+                </div>
+                <button class="btn">Buscar</button>
+
+
+            </form>
+
+            <form action="/" *ngIf="add">
+                <h5>Agrega un auto</h5>
+
+                <span class="img">Imagen (URL) por favor</span>
+                <input type="text" class="form-control" [(ngModel)]="img" name="img" required>
+
+                <span class="marca">Marca:</span>
+                <input type="text" class="form-control" [(ngModel)]="marca" name="marca" required>
+
+                <span class="color">Color:</span>
+                <input type="text" class="form-control" [(ngModel)]="color" name="color" required>
+
+                <span class="modelo">Modelo:</span>
+                <input type="text" class="form-control" [(ngModel)]="modelo" name="modelo" required>
+
+                <span class="precio">Precio</span>
+                <input type="number" class="form-control" [(ngModel)]="precio" name="precio" required>
+
+                <button class="btn-add" (click)="Agregar()">Agregar</button>
+            </form>
+
+        </div>
+
+        <div class="cars-container">
+
+            <div class="card" *ngFor="let car of globalService.arrayCars | search:searchPipe; let i = index">
+            
+                <img src={{car.img}}>
+                <div class="info">
+                    <div class="data"><span>Marca:</span> <strong>{{car.marca}}</strong> </div>
+                    <div class="data"><span>Color:</span><strong>{{car.color}}</strong></div>
+                    <div class="data"><span>Modelo:</span><strong>{{car.modelo}}</strong></div>
+                    <div class="data"><span>Precio:</span><strong>{{car.precio}}</strong></div>
+                    <button  *ngIf="numSelected !== i+1" (click)="select(i+1)">Rentar</button>
+                    <button  *ngIf="numSelected == i+1" (click)="select(i+1)">Rentado</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</section>
